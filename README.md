@@ -1,2 +1,2 @@
-# miyoo_xrick
-xrick miyoo port
+# xRick - Rick Dangerous Port
+Originally from http://www.bigorno.net/xrick/
