@@ -1,0 +1,6 @@
+ROOTDIR=
+XOBJ=
+CFLAGS=-g -ansi -pedantic -Wall -W -O2 -I /include -I/opt/mipsel-linux-uclibc/mipsel-buildroot-linux-uclibc/sysroot/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -D_ZAURUS -O2 -ffast-math -fstrict-aliasing -fomit-frame-pointer -ftree-vectorize -funroll-all-loops -fpeel-loops -ftracer -funswitch-loops -finline-functions
+LDFLAGS=-lz -L/opt/mipsel-linux-uclibc/mipsel-buildroot-linux-uclibc/sysroot/usr/lib -lSDL -lpthread -fprofile-arcs
+CC=mipsel-linux-gcc
+CPP=mipsel-linux-gcc -E

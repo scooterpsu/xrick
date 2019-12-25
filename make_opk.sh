@@ -1,14 +1,14 @@
 #!/bin/sh
 
-OPK_NAME=xrick-`date +'%Y%m%d'`.opk
+OPK_NAME=xrick.opk
 
 echo ${OPK_NAME}
 
-# create default.gcw0.desktop
-cat > default.gcw0.desktop <<EOF
+# create default.retrofw.desktop
+cat > default.retrofw.desktop <<EOF
 [Desktop Entry]
-Name=Rick Dangerous
-Comment=xRick port. An action platformer.
+Name=xRick
+Comment=Rick Dangerous port. An action platformer.
 Exec=xrick
 Terminal=false
 Type=Application
@@ -19,12 +19,12 @@ EOF
 
 # create opk
 FLIST="xrick"
-FLIST="${FLIST} default.gcw0.desktop"
+FLIST="${FLIST} default.retrofw.desktop"
 FLIST="${FLIST} data.zip"
 FLIST="${FLIST} xrick.png"
 
 rm -f ${OPK_NAME}
 mksquashfs ${FLIST} ${OPK_NAME} -all-root -no-xattrs -noappend -no-exports
 
-cat default.gcw0.desktop
-rm -f default.gcw0.desktop
+cat default.retrofw.desktop
+rm -f default.retrofw.desktop

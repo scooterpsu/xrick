@@ -83,10 +83,10 @@ endif
 all:
 	@echo "ROOTDIR=" > Makefile.global
 	@echo "XOBJ=$(XOBJ)" >> Makefile.global
-	@echo "CFLAGS=-g -ansi -pedantic -Wall -W -O2 -I $(ROOTDIR)/include $(shell /opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/bin/sdl-config --cflags) $(OPTIMISE)" >> Makefile.global
-	@echo "LDFLAGS=-lz $(shell /opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/bin/sdl-config --libs) -fprofile-arcs" >> Makefile.global
-	@echo "CC=mipsel-gcw0-linux-uclibc-gcc" >> Makefile.global
-	@echo "CPP=mipsel-gcw0-linux-uclibc-gcc -E" >> Makefile.global
+	@echo "CFLAGS=-g -ansi -pedantic -Wall -W -O2 -I $(ROOTDIR)/include $(shell sdl-config --cflags) $(OPTIMISE)" >> Makefile.global
+	@echo "LDFLAGS=-lz $(shell sdl-config --libs) -fprofile-arcs" >> Makefile.global
+	@echo "CC=mipsel-linux-gcc" >> Makefile.global
+	@echo "CPP=mipsel-linux-gcc -E" >> Makefile.global
 	$(MAKE) -C src all
 
 clean:

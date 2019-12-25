@@ -87,7 +87,7 @@ processEvent()	/* #dingoo-a320 - keys renamed so input does the right things */
     }
     else if (key == SDLK_F3) {
       sysvid_zoom(+1);
-    } else if (key == SDLK_HOME) {
+    } else if (key == SDLK_HOME || key == SDLK_END) {
       game_state = EXIT;
     } else if (key == SDLK_ESCAPE) {
       game_state = GAMEOVER;
